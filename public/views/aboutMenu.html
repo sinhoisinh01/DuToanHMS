@@ -1,0 +1,5 @@
+<div ng-controller="HomeController">
+    <ul ng-repeat="construction in constructions">
+        <li><a ui-sref="construction({id: construction.id})">{{construction.name}}</a></li>
+    </ul>
+</div>
