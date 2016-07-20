@@ -12,14 +12,15 @@
 */
 
 use App\Construction;
+use Illuminate\Support\Facades\Auth;
 
 $app->get('/', function () use ($app) {
     return redirect('/index.html');
 });
 
-$app->post('/tokensignin', function () use ($app) {
-    
-});
+$app->get('/testAuth', ['middleware' => 'auth', function () {
+    return response()->json(Auth::user()->first_name);
+}]);
 
 $app->get('/home', function () {
     return response()->json(Construction::where('user_id',0)->get());

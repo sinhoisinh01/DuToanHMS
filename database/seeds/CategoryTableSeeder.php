@@ -13,7 +13,7 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        Category::create(['id'=>0,'construction_id'=>1,'name'=>'MinhCategory1']);
-        Category::create(['id'=>1,'construction_id'=>1,'name'=>'MinhCategory2']);
+        Category::create(['construction_id'=>1,'name'=>'MinhCategory1']);
+        Category::create(['construction_id'=>1,'name'=>'MinhCategory2']);
     }
 }
